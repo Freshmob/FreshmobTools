@@ -10,6 +10,12 @@
 		5BAA364B1DDD135B0059FB9F /* FreshmobTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA36411DDD135B0059FB9F /* FreshmobTools.framework */; };
 		5BAA36501DDD135B0059FB9F /* FreshmobToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA364F1DDD135B0059FB9F /* FreshmobToolsTests.swift */; };
 		5BAA36521DDD135B0059FB9F /* FreshmobTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BAA36441DDD135B0059FB9F /* FreshmobTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BAA365C1DDD13720059FB9F /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA365B1DDD13720059FB9F /* UIStoryboard.swift */; };
+		5BAA365E1DDD3DA80059FB9F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA365D1DDD3DA80059FB9F /* UIViewController.swift */; };
+		5BAA36601DDD3E6C0059FB9F /* KeyboardObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA365F1DDD3E6C0059FB9F /* KeyboardObservable.swift */; };
+		5BAA36631DDD40E80059FB9F /* ImagePickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36611DDD40E80059FB9F /* ImagePickerHandler.swift */; };
+		5BAA36641DDD40E80059FB9F /* ImagePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36621DDD40E80059FB9F /* ImagePickerPresenter.swift */; };
+		5BAA36671DDD43260059FB9F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA36661DDD43260059FB9F /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		5BAA364A1DDD135B0059FB9F /* FreshmobToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshmobToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAA364F1DDD135B0059FB9F /* FreshmobToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshmobToolsTests.swift; sourceTree = "<group>"; };
 		5BAA36511DDD135B0059FB9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAA365B1DDD13720059FB9F /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		5BAA365D1DDD3DA80059FB9F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5BAA365F1DDD3E6C0059FB9F /* KeyboardObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObservable.swift; sourceTree = "<group>"; };
+		5BAA36611DDD40E80059FB9F /* ImagePickerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerHandler.swift; sourceTree = "<group>"; };
+		5BAA36621DDD40E80059FB9F /* ImagePickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerPresenter.swift; sourceTree = "<group>"; };
+		5BAA36661DDD43260059FB9F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAA36671DDD43260059FB9F /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,7 @@
 				5BAA36431DDD135B0059FB9F /* FreshmobTools */,
 				5BAA364E1DDD135B0059FB9F /* FreshmobToolsTests */,
 				5BAA36421DDD135B0059FB9F /* Products */,
+				5BAA36651DDD43260059FB9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +87,11 @@
 			children = (
 				5BAA36441DDD135B0059FB9F /* FreshmobTools.h */,
 				5BAA36451DDD135B0059FB9F /* Info.plist */,
+				5BAA36611DDD40E80059FB9F /* ImagePickerHandler.swift */,
+				5BAA36621DDD40E80059FB9F /* ImagePickerPresenter.swift */,
+				5BAA365F1DDD3E6C0059FB9F /* KeyboardObservable.swift */,
+				5BAA365B1DDD13720059FB9F /* UIStoryboard.swift */,
+				5BAA365D1DDD3DA80059FB9F /* UIViewController.swift */,
 			);
 			path = FreshmobTools;
 			sourceTree = "<group>";
@@ -84,6 +103,14 @@
 				5BAA36511DDD135B0059FB9F /* Info.plist */,
 			);
 			path = FreshmobToolsTests;
+			sourceTree = "<group>";
+		};
+		5BAA36651DDD43260059FB9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA36661DDD43260059FB9F /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +176,7 @@
 					5BAA36401DDD135B0059FB9F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3ZBY82TFC4;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					5BAA36491DDD135B0059FB9F = {
@@ -198,6 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAA36641DDD40E80059FB9F /* ImagePickerPresenter.swift in Sources */,
+				5BAA36601DDD3E6C0059FB9F /* KeyboardObservable.swift in Sources */,
+				5BAA365E1DDD3DA80059FB9F /* UIViewController.swift in Sources */,
+				5BAA36631DDD40E80059FB9F /* ImagePickerHandler.swift in Sources */,
+				5BAA365C1DDD13720059FB9F /* UIStoryboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +355,7 @@
 		5BAA36561DDD135B0059FB9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3ZBY82TFC4;
@@ -330,10 +364,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FreshmobTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.freshmob.FreshmobTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +377,7 @@
 		5BAA36571DDD135B0059FB9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3ZBY82TFC4;
@@ -349,6 +386,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FreshmobTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.freshmob.FreshmobTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +398,7 @@
 		5BAA36591DDD135B0059FB9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3ZBY82TFC4;
 				INFOPLIST_FILE = FreshmobToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +411,7 @@
 		5BAA365A1DDD135B0059FB9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3ZBY82TFC4;
 				INFOPLIST_FILE = FreshmobToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
