@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B7BDBA41DEE2D8300731F22 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BDBA31DEE2D8300731F22 /* UIImageExtensions.swift */; };
 		5BAA364B1DDD135B0059FB9F /* FreshmobTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA36411DDD135B0059FB9F /* FreshmobTools.framework */; };
 		5BAA36501DDD135B0059FB9F /* FreshmobToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA364F1DDD135B0059FB9F /* FreshmobToolsTests.swift */; };
 		5BAA36521DDD135B0059FB9F /* FreshmobTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BAA36441DDD135B0059FB9F /* FreshmobTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B7BDBA31DEE2D8300731F22 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		5BAA36411DDD135B0059FB9F /* FreshmobTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FreshmobTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAA36441DDD135B0059FB9F /* FreshmobTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreshmobTools.h; sourceTree = "<group>"; };
 		5BAA36451DDD135B0059FB9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				5BAA365B1DDD13720059FB9F /* UIStoryboard.swift */,
 				5BAA365D1DDD3DA80059FB9F /* UIViewController.swift */,
 				5BAA36CB1DDE840C0059FB9F /* KeyValueCodable.swift */,
+				5B7BDBA31DEE2D8300731F22 /* UIImageExtensions.swift */,
 			);
 			path = FreshmobTools;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				5BAA36641DDD40E80059FB9F /* ImagePickerPresenter.swift in Sources */,
 				5BAA36601DDD3E6C0059FB9F /* KeyboardObservable.swift in Sources */,
+				5B7BDBA41DEE2D8300731F22 /* UIImageExtensions.swift in Sources */,
 				5BAA36CC1DDE840C0059FB9F /* KeyValueCodable.swift in Sources */,
 				5BAA365E1DDD3DA80059FB9F /* UIViewController.swift in Sources */,
 				5BAA36631DDD40E80059FB9F /* ImagePickerHandler.swift in Sources */,
@@ -446,6 +450,7 @@
 				5BAA36571DDD135B0059FB9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BAA36581DDD135B0059FB9F /* Build configuration list for PBXNativeTarget "FreshmobToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +459,7 @@
 				5BAA365A1DDD135B0059FB9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
