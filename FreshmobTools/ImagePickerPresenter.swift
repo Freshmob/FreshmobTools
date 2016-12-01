@@ -11,8 +11,9 @@ import UIKit
 public protocol MediaPickerPresenter {
     func presentMediaPicker(fromController controller: UIViewController, handler: MediaPickerHandler)
     func presentDocumentPicker(fromController controller: UIViewController, handler: MediaPickerHandler)
-    func didSelectFromMediaPicker(withImage image: UIImage)
-    func didSelectFromMediaPicker(withUrl url: URL)
+    func didSelectFromMediaPicker(withImageUrl url: URL)
+    func didSelectFromMediaPicker(withMovieUrl url: URL)
+    func didSelectFromMediaPicker(withDocumentUrl url: URL)
 }
 
 public extension MediaPickerPresenter {

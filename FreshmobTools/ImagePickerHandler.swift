@@ -26,19 +26,20 @@ public class MediaPickerHandler: NSObject, UIImagePickerControllerDelegate, UINa
     }
     
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
-        self.delegate?.didSelectFromMediaPicker(withUrl: url)
+        self.delegate?.didSelectFromMediaPicker(withDocumentUrl: url)
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let mediaType = info[UIImagePickerControllerMediaType] as? String {
             switch mediaType {
             case String(kUTTypeImage):
-                if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                    self.delegate?.didSelectFromMediaPicker(withImage: selectedImage)
+                if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage,
+                    let url = selectedImage.tempFileUrl {
+                    self.delegate?.didSelectFromMediaPicker(withImageUrl: url)
                 }
             case String(kUTTypeMovie):
                 if let selectedMediaURL = info[UIImagePickerControllerMediaURL] as? URL {
-                    self.delegate?.didSelectFromMediaPicker(withUrl: selectedMediaURL)
+                    self.delegate?.didSelectFromMediaPicker(withMovieUrl: selectedMediaURL)
                 }
             default:
                 break
