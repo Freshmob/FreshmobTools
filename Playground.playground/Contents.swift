@@ -2,20 +2,15 @@
 
 import UIKit
 
-class TestClass {
-    var test: String = ""
-    static func testFunc() {}
+protocol AttributeConvertible: CustomStringConvertible, RawRepresentable {}
+
+extension AttributeConvertible {
+    var description: String { return String(describing: self.rawValue) }
 }
 
-let t = TestClass()
-
-let mirror = Mirror(reflecting: t)
-for case let (label?, value) in mirror.children {
-    print("\(label): \(value)")
+enum Test: CGFloat, AttributeConvertible {
+    case f = 12.0
+    case d = 13.0
 }
 
-print(mirror.children.count)
-print(mirror.description)
-
-let selector = Selector(("test"))
-t.respondsTo(selector)
+let a = "test".localizedCapitalized

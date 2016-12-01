@@ -18,6 +18,8 @@
 		5BAA36641DDD40E80059FB9F /* ImagePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36621DDD40E80059FB9F /* ImagePickerPresenter.swift */; };
 		5BAA36671DDD43260059FB9F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA36661DDD43260059FB9F /* MobileCoreServices.framework */; };
 		5BAA36CC1DDE840C0059FB9F /* KeyValueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA36CB1DDE840C0059FB9F /* KeyValueCodable.swift */; };
+		5BC5A9BF1DEF91E1007C1064 /* AttributeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5A9BE1DEF91E1007C1064 /* AttributeConvertible.swift */; };
+		5BC5A9C51DEFD489007C1064 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5A9C41DEFD489007C1064 /* UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		5BAA36661DDD43260059FB9F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5BAA36CA1DDE82C70059FB9F /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		5BAA36CB1DDE840C0059FB9F /* KeyValueCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueCodable.swift; sourceTree = "<group>"; };
+		5BC5A9BE1DEF91E1007C1064 /* AttributeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeConvertible.swift; sourceTree = "<group>"; };
+		5BC5A9C41DEFD489007C1064 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				5BAA365D1DDD3DA80059FB9F /* UIViewController.swift */,
 				5BAA36CB1DDE840C0059FB9F /* KeyValueCodable.swift */,
 				5B7BDBA31DEE2D8300731F22 /* UIImageExtensions.swift */,
+				5BC5A9BE1DEF91E1007C1064 /* AttributeConvertible.swift */,
+				5BC5A9C41DEFD489007C1064 /* UIAlertController.swift */,
 			);
 			path = FreshmobTools;
 			sourceTree = "<group>";
@@ -235,11 +241,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BAA36641DDD40E80059FB9F /* ImagePickerPresenter.swift in Sources */,
+				5BC5A9C51DEFD489007C1064 /* UIAlertController.swift in Sources */,
 				5BAA36601DDD3E6C0059FB9F /* KeyboardObservable.swift in Sources */,
 				5B7BDBA41DEE2D8300731F22 /* UIImageExtensions.swift in Sources */,
 				5BAA36CC1DDE840C0059FB9F /* KeyValueCodable.swift in Sources */,
 				5BAA365E1DDD3DA80059FB9F /* UIViewController.swift in Sources */,
 				5BAA36631DDD40E80059FB9F /* ImagePickerHandler.swift in Sources */,
+				5BC5A9BF1DEF91E1007C1064 /* AttributeConvertible.swift in Sources */,
 				5BAA365C1DDD13720059FB9F /* UIStoryboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
