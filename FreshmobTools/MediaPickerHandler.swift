@@ -15,13 +15,11 @@ public class MediaPickerHandler: NSObject, UIImagePickerControllerDelegate, UINa
     let imagePicker = UIImagePickerController()
     let documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF)], in: .import)    
     
-    private let sourceType: UIImagePickerControllerSourceType    
-    
-    public init(sourceType: UIImagePickerControllerSourceType) {
-        self.sourceType = sourceType
+    public init(sourceType: UIImagePickerControllerSourceType? = nil) {
         super.init()
         self.documentPicker.delegate = self
         self.imagePicker.mediaTypes = [String(kUTTypeImage), String(kUTTypeMovie)];
+        if let s = sourceType { self.imagePicker.sourceType = s }
         self.imagePicker.delegate = self
     }
     

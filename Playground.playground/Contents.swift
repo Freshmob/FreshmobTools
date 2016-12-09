@@ -2,15 +2,38 @@
 
 import UIKit
 
-protocol AttributeConvertible: CustomStringConvertible, RawRepresentable {}
-
-extension AttributeConvertible {
-    var description: String { return String(describing: self.rawValue) }
+public protocol KeyValueCodable {
+    func value<T>(forKey key: String) -> T?
 }
 
-enum Test: CGFloat, AttributeConvertible {
-    case f = 12.0
-    case d = 13.0
+public extension KeyValueCodable {
+    func value<T>(forKey key: String) -> T? {
+        let mirror = Mirror(reflecting: self)
+        for case let (label?, value) in mirror.children {
+            if label == key { return value as? T }
+        }
+        return nil
+    }
 }
 
-let a = "test".localizedCapitalized
+struct A:KeyValueCodable {
+    var propertyA = "123"
+    var propertyB = "ABC"
+    
+    var keys: [String] {
+        let mirror = Mirror(reflecting: self)
+        return mirror.children.map({ (k,v) -> String in
+            if let unwrapped = k { return unwrapped }
+            return ""
+        })
+    }
+    
+    func clone() -> Self {
+        let a = A()
+        a.keys
+    }
+}
+
+let a = A()
+print(a.keys)
+
