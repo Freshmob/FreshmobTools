@@ -11,6 +11,12 @@ import MobileCoreServices
 
 public class MediaPickerHandler: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentPickerDelegate {
     
+    public enum SourceType {
+        case camera
+        case photoLibrary
+        case iCloud
+    }
+    
     var delegate: MediaPickerPresenter?
     let imagePicker = UIImagePickerController()
     let documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF)], in: .import)    
