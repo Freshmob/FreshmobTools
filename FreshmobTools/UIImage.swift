@@ -6,6 +6,7 @@
 //  Copyright © 2016 Rogerio de Paula Assis. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 public extension UIImage {

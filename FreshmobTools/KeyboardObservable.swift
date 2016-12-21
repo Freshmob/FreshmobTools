@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public typealias KeyboardAnimationTuple = (duration: TimeInterval, curve: UInt)
 

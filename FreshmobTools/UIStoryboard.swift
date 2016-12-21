@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol UIStoryboardable: RawRepresentable {
     var name: String { get }

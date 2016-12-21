@@ -6,6 +6,8 @@
 //  Copyright © 2016 Rogerio de Paula Assis. All rights reserved.
 //
 
+import UIKit
+
 public extension UIAlertController {
     func addActions(_ actions: UIAlertAction...) {
         actions.forEach { self.addAction($0) }

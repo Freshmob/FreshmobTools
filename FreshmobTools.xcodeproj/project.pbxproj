@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B633A671DFF811800C1F6A0 /* FreshmobTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA36411DDD135B0059FB9F /* FreshmobTools.framework */; };
 		5B827F301DF00CA100E0CD6F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B827F2F1DF00CA100E0CD6F /* UIImage.swift */; };
-		5BAA364B1DDD135B0059FB9F /* FreshmobTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA36411DDD135B0059FB9F /* FreshmobTools.framework */; };
 		5BAA36501DDD135B0059FB9F /* FreshmobToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA364F1DDD135B0059FB9F /* FreshmobToolsTests.swift */; };
 		5BAA36521DDD135B0059FB9F /* FreshmobTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BAA36441DDD135B0059FB9F /* FreshmobTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BAA365C1DDD13720059FB9F /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA365B1DDD13720059FB9F /* UIStoryboard.swift */; };
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BAA364B1DDD135B0059FB9F /* FreshmobTools.framework in Frameworks */,
+				5B633A671DFF811800C1F6A0 /* FreshmobTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
