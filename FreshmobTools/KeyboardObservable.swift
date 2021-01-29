@@ -22,17 +22,17 @@ public extension KeyboardObservable where Self: UIViewController {
         
     func unsubscribeToKeyboardNotifications() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        notificationCenter.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+        notificationCenter.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func subscribeToKeyboardNotifications() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(forName: .UIKeyboardWillShow,
+        notificationCenter.addObserver(forName: UIResponder.keyboardWillShowNotification,
                                        object: nil,
                                        queue: nil) { [weak self] (notification) in
             if let userInfo = notification.userInfo,
-                let keyboardFrame = self?.getKeyboardRect(forKey: UIKeyboardFrameEndUserInfoKey,
+               let keyboardFrame = self?.getKeyboardRect(forKey: UIResponder.keyboardFrameEndUserInfoKey,
                                                           withUserInfo: userInfo),
                 let values = self?.getDurationAndCurve(fromNotificationUserInfo: userInfo) {
                 let bottomLayoutGuideLength = self?.bottomLayoutGuide.length ?? 0
@@ -40,11 +40,11 @@ public extension KeyboardObservable where Self: UIViewController {
                 self?.keyboardWillShowCallback(offset, values)
             }
         }
-        notificationCenter.addObserver(forName: .UIKeyboardWillHide,
+        notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
                                        object: nil,
                                        queue: nil) { [weak self] (notification) in
             if let userInfo = notification.userInfo,
-                let keyboardFrame = self?.getKeyboardRect(forKey: UIKeyboardFrameEndUserInfoKey,
+               let keyboardFrame = self?.getKeyboardRect(forKey: UIResponder.keyboardFrameEndUserInfoKey,
                                                           withUserInfo: userInfo),
                 let values = self?.getDurationAndCurve(fromNotificationUserInfo: userInfo) {
                 let bottomLayoutGuideLength = self?.bottomLayoutGuide.length ?? 0
@@ -62,8 +62,8 @@ public extension KeyboardObservable where Self: UIViewController {
     
     private func getDurationAndCurve(fromNotificationUserInfo userInfo: [AnyHashable: Any]) ->
         (duration: TimeInterval, curve: UInt)? {
-        guard let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval,
-        let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UInt else {
+        guard let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {
             return nil
         }
         return (duration, curve)

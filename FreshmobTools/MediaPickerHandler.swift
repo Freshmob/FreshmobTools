@@ -21,7 +21,7 @@ public class MediaPickerHandler: NSObject, UIImagePickerControllerDelegate, UINa
     let imagePicker = UIImagePickerController()
     let documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF)], in: .import)    
     
-    public init(sourceType: UIImagePickerControllerSourceType? = nil) {
+    public init(sourceType: UIImagePickerController.SourceType? = nil) {
         super.init()
         self.documentPicker.delegate = self
         self.imagePicker.mediaTypes = [String(kUTTypeImage), String(kUTTypeMovie)];
@@ -34,15 +34,15 @@ public class MediaPickerHandler: NSObject, UIImagePickerControllerDelegate, UINa
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let mediaType = info[UIImagePickerControllerMediaType] as? String {
+        if let mediaType = info[UIImagePickerController.InfoKey.mediaType.rawValue] as? String {
             switch mediaType {
             case String(kUTTypeImage):
-                if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage,
+                if let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage,
                     let url = selectedImage.tempFileUrl {
                     self.delegate?.didSelectFromMediaPicker(withImageUrl: url)
                 }
             case String(kUTTypeMovie):
-                if let selectedMediaURL = info[UIImagePickerControllerMediaURL] as? URL {
+                if let selectedMediaURL = info[UIImagePickerController.InfoKey.mediaURL.rawValue] as? URL {
                     self.delegate?.didSelectFromMediaPicker(withMovieUrl: selectedMediaURL)
                 }
             default:
